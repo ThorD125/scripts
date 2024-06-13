@@ -12,7 +12,7 @@ echo $IP
 
 # Run initial nmap scan to find open ports
 echo "Running initial nmap scan on $IP..."
-nmap_output=$(sudo nmap "$IP" --open)
+nmap_output=$(sudo nmap "$IP" -Pn --open)
 
 # Extract open ports from nmap output~
 ports=$(echo "$nmap_output" | grep -oP '\d{1,5}/(tcp|udp) open' | cut -d'/' -f1 | tr '\n' ',' | sed 's/,$//')
