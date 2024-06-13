@@ -25,4 +25,4 @@ fi
 
 # Run detailed nmap scan with service/version detection and default scripts on the found ports
 echo "Running detailed nmap scan on $IP for ports: $ports..."
-sudo nmap -sV -sC -p -Pn "$ports" "$IP"
+sudo nmap -sV -sC -Pn -p "$ports" "$IP"
