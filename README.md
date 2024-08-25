@@ -12,4 +12,4 @@ echo 'export PATH="$HOME/scripts:$PATH"' >> ~/.zshrc
 source ~/.zshrc
 
 ## Update
-cd scripts && git add . && git stash && git pull && chmod +x . -R && cd ..
+cd $HOME/scripts && git add . && git stash && git pull && chmod +x . -R && cd ..
